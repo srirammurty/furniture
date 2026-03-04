@@ -567,11 +567,11 @@ const QuotationBuilder = () => {
 
               {/* Category Columns */}
               <div className="space-y-6">
-                {Object.entries(categoryNames).map(([catId, catName]) => (
+                {categories.map((catId) => (
                   <div key={catId}>
                     <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-3 flex items-center gap-2">
                       <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      {catName}
+                      {catId}
                     </h3>
                     <div className="space-y-2">
                       {(itemsByCategory[catId] || []).map((item) => (
