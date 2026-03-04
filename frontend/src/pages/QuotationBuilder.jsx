@@ -253,13 +253,16 @@ const QuotationBuilder = () => {
     }
   };
 
-  // Group items by category
+  // Group items by category and get unique categories
   const itemsByCategory = items.reduce((acc, item) => {
     const cat = item.category;
     if (!acc[cat]) acc[cat] = [];
     acc[cat].push(item);
     return acc;
   }, {});
+
+  // Get sorted category keys
+  const categories = Object.keys(itemsByCategory).sort();
 
   return (
     <div className="min-h-screen bg-[#fafafa] font-body">
