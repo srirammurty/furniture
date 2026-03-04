@@ -22,7 +22,7 @@ import {
 } from "../components/ui/table";
 import { ScrollArea } from "../components/ui/scroll-area";
 import { Separator } from "../components/ui/separator";
-import { defaultItems, categoryNames } from "../data/sampleItems";
+import { defaultItems } from "../data/sampleItems";
 
 const QuotationBuilder = () => {
   // State for items catalog
