@@ -217,8 +217,40 @@ const QuotationBuilder = () => {
   }, []);
 
   // Export to PDF
-  const handleExportPDF = () => {
-    window.print();
+  const handleExportPDF = async () => {
+    if (!quotationRef.current) return;
+    
+    setIsExporting(true);
+    toast.info("Generating PDF...");
+    
+    try {
+      const element = quotationRef.current;
+      const fileName = `${clientName || "Client"}_Quotation_${quotationDate}.pdf`;
+      
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: fileName,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { 
+          scale: 2, 
+          useCORS: true,
+          letterRendering: true,
+        },
+        jsPDF: { 
+          unit: "mm", 
+          format: "a4", 
+          orientation: "portrait" 
+        },
+      };
+      
+      await html2pdf().set(opt).from(element).save();
+      toast.success("PDF downloaded successfully!");
+    } catch (error) {
+      console.error("PDF export error:", error);
+      toast.error("Failed to generate PDF");
+    } finally {
+      setIsExporting(false);
+    }
   };
 
   // Group items by category
