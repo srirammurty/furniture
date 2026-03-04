@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import { toast } from "sonner";
-import { Plus, Trash2, FileDown, Upload, GripVertical, X, Edit2, Check } from "lucide-react";
+import html2pdf from "html2pdf.js";
+import { Plus, Trash2, FileDown, Upload, GripVertical, X, Edit2, Check, Loader2 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
