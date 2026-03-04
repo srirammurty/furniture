@@ -50,6 +50,10 @@ const QuotationBuilder = () => {
   
   // File input ref
   const fileInputRef = useRef(null);
+  const quotationRef = useRef(null);
+  
+  // Export loading state
+  const [isExporting, setIsExporting] = useState(false);
 
   // Format price to Indian Rupees
   const formatPrice = (price) => {
