@@ -506,11 +506,15 @@ const QuotationBuilder = () => {
             <Button
               data-testid="export-pdf-btn"
               onClick={handleExportPDF}
-              disabled={sections.length === 0}
+              disabled={sections.length === 0 || isExporting}
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none uppercase tracking-widest text-xs font-medium h-12 px-8"
             >
-              <FileDown className="w-4 h-4 mr-2" />
-              Export as PDF
+              {isExporting ? (
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              ) : (
+                <FileDown className="w-4 h-4 mr-2" />
+              )}
+              {isExporting ? "Generating..." : "Export as PDF"}
             </Button>
           </div>
         </div>
