@@ -1,0 +1,128 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Creative Designer",
+    "aesthetic": "Swiss Minimalist x Luxury Interior",
+    "principles": [
+      "Fusion over Imitation: Mix Architectural precision with Digital utility",
+      "Content is King: The Quotation is the hero",
+      "Negative Space: Luxury is defined by what isn't there",
+      "Contrast: Stark Black & White for maximum clarity"
+    ]
+  },
+  "project_context": {
+    "app_name": "Eclat Spazio Quotation Tool",
+    "type": "Utility Dashboard",
+    "target_audience": "Interior Designers, Architects",
+    "core_function": "Drag-and-drop quotation builder"
+  },
+  "design_system": {
+    "typography": {
+      "font_family_heading": "Playfair Display, serif",
+      "font_family_body": "Manrope, sans-serif",
+      "font_family_mono": "JetBrains Mono, monospace",
+      "scale": {
+        "h1": "text-4xl md:text-5xl font-medium tracking-tight",
+        "h2": "text-2xl md:text-3xl font-normal tracking-tight",
+        "h3": "text-xl font-medium",
+        "body": "text-sm leading-relaxed",
+        "caption": "text-xs text-muted-foreground uppercase tracking-widest"
+      }
+    },
+    "colors": {
+      "palette_name": "Architectural Monochrome",
+      "background": "#FFFFFF",
+      "foreground": "#0A0A0A",
+      "muted": "#F4F4F5",
+      "muted_foreground": "#71717A",
+      "border": "#E4E4E7",
+      "primary": "#18181B",
+      "primary_foreground": "#FAFAFA",
+      "accent": "#F4F4F5",
+      "destructive": "#EF4444",
+      "rules": [
+        "NO Gradients",
+        "NO Shadows (except for floating elements)",
+        "Use 1px borders for definition",
+        "Black is for Action, White is for Canvas"
+      ]
+    },
+    "layout": {
+      "grid_system": "Custom Split View",
+      "spacing": {
+        "container_padding": "p-6 md:p-8 lg:p-12",
+        "item_gap": "gap-4",
+        "section_gap": "gap-8"
+      },
+      "panels": {
+        "left_quotation": {
+          "width": "w-full lg:w-[70%]",
+          "bg": "bg-white",
+          "style": "shadow-2xl shadow-black/5 border border-border/40 min-h-[297mm] aspect-[210/297] mx-auto"
+        },
+        "right_selection": {
+          "width": "w-full lg:w-[30%]",
+          "bg": "bg-muted/30",
+          "style": "border-l border-border h-screen sticky top-0 overflow-y-auto p-6"
+        }
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-none uppercase tracking-widest text-xs font-medium transition-all",
+        "secondary": "bg-transparent border border-input hover:bg-accent hover:text-accent-foreground h-10 px-6 rounded-none uppercase tracking-widest text-xs font-medium transition-all",
+        "ghost": "hover:bg-accent hover:text-accent-foreground h-10 px-4 rounded-none"
+      },
+      "cards": {
+        "item": "bg-white border border-border/60 hover:border-primary/100 transition-colors cursor-grab active:cursor-grabbing p-4 flex flex-col gap-2 group rounded-none",
+        "item_hover": "group-hover:shadow-lg group-hover:shadow-black/5"
+      },
+      "inputs": {
+        "default": "flex h-9 w-full rounded-none border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+      },
+      "tables": {
+        "header": "h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] uppercase text-[10px] tracking-wider",
+        "row": "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+        "cell": "p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+      }
+    },
+    "visual_enhancers": {
+      "textures": "Subtle noise overlay on the main background (optional)",
+      "borders": "1px solid #E5E5E5",
+      "shadows": "shadow-sm for dropdowns, shadow-xl for the main paper sheet"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "mood",
+        "url": "https://images.unsplash.com/photo-1769107805446-a55542a7e75f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwaW50ZXJpb3IlMjBkZXNpZ24lMjBhcmNoaXRlY3R1cmUlMjB0ZXh0dXJlfGVufDB8fHx8MTc3MjY0NjEyOHww&ixlib=rb-4.1.0&q=85",
+        "description": "White sheer curtains - use for subtle background or empty state"
+      },
+      {
+        "category": "mood",
+        "url": "https://images.unsplash.com/photo-1757009632078-70e31a564ed3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwaW50ZXJpb3IlMjBkZXNpZ24lMjBhcmNoaXRlY3R1cmUlMjB0ZXh0dXJlfGVufDB8fHx8MTc3MjY0NjEyOHww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern blue staircase - use for login/welcome screen if needed"
+      },
+      {
+        "category": "mood",
+        "url": "https://images.unsplash.com/photo-1761330439316-72229b71798f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwaW50ZXJpb3IlMjBkZXNpZ24lMjBhcmNoaXRlY3R1cmUlMjB0ZXh0dXJlfGVufDB8fHx8MTc3MjY0NjEyOHww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern armchair - use for 'Furniture' category placeholder"
+      }
+    ],
+    "icons": "Use Lucide React (already installed). Preferred icons: LayoutTemplate, Plus, Trash2, FileDown, GripVertical, Upload"
+  },
+  "implementation_instructions": {
+    "drag_and_drop": "Use HTML5 Drag and Drop API. Add 'draggable' attribute to items. Handle 'onDragStart', 'onDragOver', 'onDrop'. Visual feedback is key.",
+    "pdf_export": "Use window.print() with specific @media print CSS. Hide the right panel and UI buttons during print. Ensure the left panel scales to fit A4.",
+    "state_management": "Use React Context or simple State for the quotation data. Structure: { sections: [{ id, title, items: [] }] }",
+    "csv_parsing": "Use simple string splitting for CSV parsing. No heavy libraries needed.",
+    "responsive": "On mobile, stack the panels. Right panel (Selection) goes to the BOTTOM or becomes a Drawer/Modal. Left panel (Quotation) takes full width."
+  },
+  "universal_guidelines": [
+    "Avoid 'AI Slop': No generic gradients, no rounded-xl borders everywhere. Keep it sharp and architectural.",
+    "Micro-interactions: Buttons should have a subtle scale or border-color change on hover.",
+    "Data-TestID: All interactive elements MUST have data-testid attributes (e.g., 'add-section-btn', 'export-pdf-btn').",
+    "Sonner: Use 'sonner' for all notifications (e.g., 'Item added', 'Quotation saved')."
+  ]
+}
