@@ -269,6 +269,7 @@ const QuotationBuilder = () => {
         {/* LEFT PANEL - Quotation Paper (70%) */}
         <div className="w-full lg:w-[70%] p-4 md:p-8 lg:p-12 order-2 lg:order-1">
           <div
+            ref={quotationRef}
             className="quotation-paper bg-white border border-border/40 shadow-xl shadow-black/5 mx-auto max-w-4xl p-8 md:p-12"
             data-testid="quotation-paper"
           >
